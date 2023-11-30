@@ -20,5 +20,8 @@ body{
     align-items: center;
 }
 .clicked{
-    background-color: aqua;
+    background-color: rgb(1, 145, 13);
+}
+.clicked-bomb{
+    background-color: red;
 }
