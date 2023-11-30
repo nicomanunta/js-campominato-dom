@@ -39,6 +39,7 @@ function createGrid(){
     document.getElementById("grid").innerHTML = "";
 
     let bombs_generator = generateBombs(number_bombs)
+    let punteggio = 0
 
     for(let i = 1; i<=100; i++){
 
@@ -48,7 +49,9 @@ function createGrid(){
         square.addEventListener("click", function(){
             if(bombs_generator.includes(i) == false){
                 this.classList.add("clicked")
-                console.log("Hai cliccato la cella numero" +" "+ parseInt(i+1))
+                
+                punteggio = punteggio + 1
+                document.getElementById("score").innerHTML = `Score: ${punteggio}`
             }
             else{
                 this.classList.add("clicked-bomb")
